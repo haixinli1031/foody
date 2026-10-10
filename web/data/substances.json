@@ -1,0 +1,2127 @@
+{
+  "version": "0.1.0-draft",
+  "review_status": "DRAFT. Not yet reviewed by a board-certified toxicologist. Each entry cites its source; verify before relying on it.",
+  "updated": "2026-10-10",
+  "tiers": {
+    "A": "Regulatory list (law or regulation in force)",
+    "B": "Authoritative scientific body (IARC, ECHA harmonised classification, SCCS, EU endocrine disruptor list)",
+    "C": "Advocacy or screening list (NGO)",
+    "D": "Fact derived from the label itself"
+  },
+  "sources": {
+    "eu_cpr": {
+      "name": "EU Cosmetic Products Regulation (EC) 1223/2009, consolidated annexes",
+      "url": "https://ec.europa.eu/growth/tools-databases/cosing/"
+    },
+    "eu_cpr_annex2": {
+      "name": "EU Cosmetics Regulation Annex II (prohibited substances)",
+      "url": "https://cosingchecker.com/annex/ii"
+    },
+    "eu_cpr_annex3": {
+      "name": "EU Cosmetics Regulation Annex III (restricted substances)",
+      "url": "https://cosingchecker.com/annex/iii"
+    },
+    "eu_cpr_annex5": {
+      "name": "EU Cosmetics Regulation Annex V (permitted preservatives)",
+      "url": "https://cosingchecker.com/annex/v"
+    },
+    "eu_cpr_annex6": {
+      "name": "EU Cosmetics Regulation Annex VI (permitted UV filters)",
+      "url": "https://cosingchecker.com/annex/vi"
+    },
+    "eu_2023_1545": {
+      "name": "Commission Regulation (EU) 2023/1545 (fragrance allergen labelling, applies to new products from 31 July 2026)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1545/oj"
+    },
+    "eu_2022_1181": {
+      "name": "Commission Regulation (EU) 2022/1181 (formaldehyde-releaser warning threshold 0.001%)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/1181/oj"
+    },
+    "echa_clp": {
+      "name": "ECHA C&L Inventory, harmonised classification (CLP Regulation 1272/2008 Annex VI)",
+      "url": "https://echa.europa.eu/information-on-chemicals/cl-inventory-database"
+    },
+    "echa_ed": {
+      "name": "ECHA Endocrine disruptor assessment list",
+      "url": "https://echa.europa.eu/ed-assessment"
+    },
+    "echa_svhc": {
+      "name": "ECHA Candidate List of substances of very high concern",
+      "url": "https://echa.europa.eu/candidate-list-table"
+    },
+    "reach_xvii": {
+      "name": "REACH Annex XVII restrictions",
+      "url": "https://echa.europa.eu/substances-restricted-under-reach"
+    },
+    "iarc": {
+      "name": "IARC Monographs, agents classified by the IARC Monographs",
+      "url": "https://monographs.iarc.who.int/list-of-classifications"
+    },
+    "prop65": {
+      "name": "California Proposition 65 list (OEHHA)",
+      "url": "https://oehha.ca.gov/proposition-65/proposition-65-list"
+    },
+    "fda_antiseptic_2016": {
+      "name": "US FDA final rule on consumer antiseptic washes, 6 Sept 2016",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-issues-final-rule-safety-and-effectiveness-antibacterial-soaps"
+    },
+    "fda_hydroquinone": {
+      "name": "US FDA, hydroquinone no longer permitted in OTC skin lightening products (CARES Act 2020)",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-works-protect-consumers-potentially-harmful-otc-skin-lightening-products"
+    },
+    "fda_lead_acetate": {
+      "name": "US FDA repeal of lead acetate colour additive approval in hair dyes (2018)",
+      "url": "https://www.federalregister.gov/documents/2018/10/31/2018-23750/lead-acetate-repeal-of-listing-as-a-color-additive-in-cosmetics-that-color-the-hair-on-the-scalp"
+    },
+    "ca_ab2771": {
+      "name": "California AB 2771 (intentionally added PFAS in cosmetics prohibited from 1 Jan 2025)",
+      "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202120220AB2771"
+    },
+    "ny_dioxane": {
+      "name": "New York Environmental Conservation Law 35-0105 (1,4-dioxane limits in household cleansing and personal care products)",
+      "url": "https://dec.ny.gov/regulatory/regulations/1-4-dioxane-limits"
+    },
+    "hawaii_sb2571": {
+      "name": "Hawaii Act 104 (2018), sale of sunscreen containing oxybenzone or octinoxate prohibited from 1 Jan 2021",
+      "url": "https://www.capitol.hawaii.gov/sessions/session2018/bills/SB2571_CD1_.HTM"
+    },
+    "sccs": {
+      "name": "Scientific Committee on Consumer Safety opinions",
+      "url": "https://health.ec.europa.eu/scientific-committees/scientific-committee-consumer-safety-sccs/sccs-opinions_en"
+    },
+    "tedx": {
+      "name": "TEDX List of Potential Endocrine Disruptors (The Endocrine Disruption Exchange; archived)",
+      "url": "https://endocrinedisruption.org/interactive-tools/tedx-list-of-potential-endocrine-disruptors/search-the-tedx-list"
+    },
+    "sin": {
+      "name": "ChemSec SIN List",
+      "url": "https://sinlist.chemsec.org/"
+    },
+    "eu_detergents": {
+      "name": "EU Detergents Regulation (EC) 648/2004, Annex VII labelling",
+      "url": "https://eur-lex.europa.eu/eli/reg/2004/648/oj"
+    },
+    "us_fpla": {
+      "name": "US Fair Packaging and Labeling Act and 21 CFR 701.3 (fragrance may be listed as 'fragrance')",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-G/part-701/subpart-A/section-701.3"
+    }
+  },
+  "substances": [
+    {
+      "id": "fragrance",
+      "display": "Fragrance / Parfum",
+      "function": "Scent mixture",
+      "names": [
+        "fragrance",
+        "parfum",
+        "perfume",
+        "aroma",
+        "fragrance (parfum)",
+        "parfum (fragrance)",
+        "fragrance/parfum",
+        "parfum/fragrance",
+        "natural fragrance",
+        "香精",
+        "香料"
+      ],
+      "flags": [
+        {
+          "tier": "D",
+          "category": "undisclosed",
+          "source": "us_fpla",
+          "quote": "US and EU labelling rules allow the components of a fragrance mixture to be listed under the single word 'fragrance' or 'parfum'. Only specified allergens must be named individually in the EU.",
+          "endpoints": []
+        }
+      ],
+      "note": "The word covers a mixture whose components are not shown on the label. Some are declared separately when they are on the EU allergen list."
+    },
+    {
+      "id": "generic_surfactants",
+      "display": "Generic ingredient terms",
+      "function": "Category term, not a substance",
+      "names": [
+        "surfactants",
+        "anionic surfactants",
+        "non-ionic surfactants",
+        "nonionic surfactants",
+        "cationic surfactants",
+        "enzymes",
+        "colorant",
+        "colorants",
+        "dye",
+        "dyes",
+        "preservative",
+        "preservatives",
+        "cleaning agents",
+        "cleaning agent",
+        "optical brighteners",
+        "optical brightener",
+        "stabilizers",
+        "solvent",
+        "solvents",
+        "builders",
+        "quality control agents",
+        "processing aids"
+      ],
+      "flags": [
+        {
+          "tier": "D",
+          "category": "undisclosed",
+          "source": "eu_detergents",
+          "quote": "Detergent labels may name ingredient classes (for example 'anionic surfactants 5-15%') rather than individual substances; the EU Detergents Regulation requires preservatives and listed allergens to be named individually.",
+          "endpoints": []
+        }
+      ],
+      "note": "A class name tells you the type of ingredient, not which substance it is."
+    },
+    {
+      "id": "formaldehyde",
+      "display": "Formaldehyde",
+      "cas": "50-00-0",
+      "function": "Preservative / contaminant",
+      "names": [
+        "formaldehyde",
+        "formalin",
+        "methanal",
+        "methylene glycol",
+        "formaldehyde solution"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (substances prohibited in cosmetic products), entry 1577, since 2019.",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "carcinogen",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 as known to the State of California to cause cancer (1988).",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 1: carcinogenic to humans (Monograph 100F).",
+          "endpoints": [
+            "cancer"
+          ]
+        }
+      ],
+      "note": "Methylene glycol is formaldehyde dissolved in water and is treated as formaldehyde by regulators."
+    },
+    {
+      "id": "quaternium_15",
+      "display": "Quaternium-15",
+      "cas": "4080-31-3",
+      "function": "Preservative (formaldehyde releaser)",
+      "names": [
+        "quaternium-15",
+        "quaternium 15",
+        "dowicil 200"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) since 2019 (Regulation (EU) 2019/831).",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "D",
+          "category": "formaldehyde_releaser",
+          "source": "eu_2022_1181",
+          "quote": "Formaldehyde-releasing preservative. In the EU, products containing a releaser must carry 'releases formaldehyde' when total formaldehyde exceeds 0.001%.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "dmdm_hydantoin",
+      "display": "DMDM Hydantoin",
+      "cas": "6440-58-0",
+      "function": "Preservative (formaldehyde releaser)",
+      "names": [
+        "dmdm hydantoin",
+        "dmdmh",
+        "dimethylol dimethyl hydantoin"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 33: permitted preservative, maximum 0.6%.",
+          "restriction": {
+            "limit": "0.6%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "D",
+          "category": "formaldehyde_releaser",
+          "source": "eu_2022_1181",
+          "quote": "Formaldehyde-releasing preservative. EU label warning 'releases formaldehyde' required above 0.001% total formaldehyde.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "imidazolidinyl_urea",
+      "display": "Imidazolidinyl Urea",
+      "cas": "39236-46-9",
+      "function": "Preservative (formaldehyde releaser)",
+      "names": [
+        "imidazolidinyl urea",
+        "germall 115"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 27: permitted preservative, maximum 0.6%.",
+          "restriction": {
+            "limit": "0.6%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "D",
+          "category": "formaldehyde_releaser",
+          "source": "eu_2022_1181",
+          "quote": "Formaldehyde-releasing preservative. EU label warning required above 0.001% total formaldehyde.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "diazolidinyl_urea",
+      "display": "Diazolidinyl Urea",
+      "cas": "78491-02-8",
+      "function": "Preservative (formaldehyde releaser)",
+      "names": [
+        "diazolidinyl urea",
+        "germall ii"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 46: permitted preservative, maximum 0.5%.",
+          "restriction": {
+            "limit": "0.5%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "D",
+          "category": "formaldehyde_releaser",
+          "source": "eu_2022_1181",
+          "quote": "Formaldehyde-releasing preservative. EU label warning required above 0.001% total formaldehyde.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "bronopol",
+      "display": "2-Bromo-2-nitropropane-1,3-diol (Bronopol)",
+      "cas": "52-51-7",
+      "function": "Preservative (formaldehyde releaser)",
+      "names": [
+        "2-bromo-2-nitropropane-1,3-diol",
+        "bronopol"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 21: permitted preservative, maximum 0.1%; avoid formation of nitrosamines.",
+          "restriction": {
+            "limit": "0.1%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "D",
+          "category": "formaldehyde_releaser",
+          "source": "eu_2022_1181",
+          "quote": "Formaldehyde-releasing preservative. EU label warning required above 0.001% total formaldehyde.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "sodium_hydroxymethylglycinate",
+      "display": "Sodium Hydroxymethylglycinate",
+      "cas": "70161-44-3",
+      "function": "Preservative (formaldehyde releaser)",
+      "names": [
+        "sodium hydroxymethylglycinate",
+        "sodium hydroxymethyl glycinate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 51: permitted preservative, maximum 0.5%.",
+          "restriction": {
+            "limit": "0.5%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "D",
+          "category": "formaldehyde_releaser",
+          "source": "eu_2022_1181",
+          "quote": "Formaldehyde-releasing preservative. EU label warning required above 0.001% total formaldehyde.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "methylisothiazolinone",
+      "display": "Methylisothiazolinone (MI)",
+      "cas": "2682-20-4",
+      "function": "Preservative",
+      "names": [
+        "methylisothiazolinone",
+        "mi",
+        "mit",
+        "2-methyl-4-isothiazolin-3-one"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 57: permitted only in rinse-off products, maximum 0.0015%; not permitted in leave-on products (Regulation (EU) 2016/1198 and 2017/1224).",
+          "restriction": {
+            "limit": "0.0015%",
+            "product_types": [
+              "rinse_off"
+            ]
+          },
+          "endpoints": [
+            "sensitisation"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "sensitiser",
+          "source": "echa_clp",
+          "quote": "Harmonised classification includes Skin Sens. 1A (H317: may cause an allergic skin reaction).",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mci_mi",
+      "display": "Methylchloroisothiazolinone / Methylisothiazolinone",
+      "cas": "55965-84-9",
+      "function": "Preservative",
+      "names": [
+        "methylchloroisothiazolinone",
+        "methylchloroisothiazolinone (and) methylisothiazolinone",
+        "methylchloroisothiazolinone and methylisothiazolinone",
+        "cmit/mit",
+        "kathon cg",
+        "5-chloro-2-methyl-4-isothiazolin-3-one"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 39: mixture permitted only in rinse-off products, maximum 0.0015% (3:1 mixture).",
+          "restriction": {
+            "limit": "0.0015%",
+            "product_types": [
+              "rinse_off"
+            ]
+          },
+          "endpoints": [
+            "sensitisation"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "sensitiser",
+          "source": "echa_clp",
+          "quote": "Harmonised classification includes Skin Sens. 1A and Skin Corr. 1B.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "benzisothiazolinone",
+      "display": "Benzisothiazolinone (BIT)",
+      "cas": "2634-33-5",
+      "function": "Preservative (biocide), common in detergents and cleaners",
+      "names": [
+        "benzisothiazolinone",
+        "1,2-benzisothiazolin-3-one",
+        "1,2-benzisothiazol-3(2h)-one",
+        "bit",
+        "benzisothiazolinon"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "sensitiser",
+          "source": "echa_clp",
+          "quote": "Harmonised classification: Skin Sens. 1 (H317: may cause an allergic skin reaction), Eye Dam. 1, Skin Irrit. 2, Acute Tox. 4, Aquatic Acute 1.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "not_permitted_cosmetics",
+          "source": "eu_cpr_annex5",
+          "quote": "Not listed in Annex V, so not a permitted preservative in EU cosmetic products. Its use in detergents is governed by the Biocidal Products Regulation and the Detergents Regulation.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "octylisothiazolinone",
+      "display": "Octylisothiazolinone (OIT)",
+      "cas": "26530-20-1",
+      "function": "Preservative (biocide)",
+      "names": [
+        "octylisothiazolinone",
+        "2-octyl-2h-isothiazol-3-one",
+        "oit"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "sensitiser",
+          "source": "echa_clp",
+          "quote": "Harmonised classification includes Skin Sens. 1A, Skin Corr. 1B, Acute Tox. 2/3.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "butylparaben",
+      "display": "Butylparaben",
+      "cas": "94-26-8",
+      "function": "Preservative",
+      "names": [
+        "butylparaben",
+        "butyl paraben",
+        "butyl 4-hydroxybenzoate",
+        "sodium butylparaben",
+        "potassium butylparaben"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 12a: maximum 0.14% (as acid) for the sum of butyl- and propylparaben; not permitted in leave-on products designed for the nappy area of children under three (Regulation (EU) 1004/2014).",
+          "restriction": {
+            "limit": "0.14%",
+            "exceptions": "not in leave-on for nappy area, under 3 years"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "Butylparaben identified as a substance of very high concern for endocrine-disrupting properties (human health) and added to the ECHA Candidate List in 2020.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "propylparaben",
+      "display": "Propylparaben",
+      "cas": "94-13-3",
+      "function": "Preservative",
+      "names": [
+        "propylparaben",
+        "propyl paraben",
+        "propyl 4-hydroxybenzoate",
+        "sodium propylparaben",
+        "potassium propylparaben"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 12a: maximum 0.14% (as acid) for the sum of propyl- and butylparaben; not permitted in leave-on products designed for the nappy area of children under three.",
+          "restriction": {
+            "limit": "0.14%"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list (under evaluation).",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "methylparaben",
+      "display": "Methylparaben",
+      "cas": "99-76-3",
+      "function": "Preservative",
+      "names": [
+        "methylparaben",
+        "methyl paraben",
+        "methyl 4-hydroxybenzoate",
+        "sodium methylparaben"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 12: maximum 0.4% (as acid) for a single ester, 0.8% for mixtures of esters.",
+          "restriction": {
+            "limit": "0.4%"
+          },
+          "endpoints": []
+        }
+      ],
+      "note": "SCCS (2013) considered methyl- and ethylparaben safe at the permitted concentrations."
+    },
+    {
+      "id": "ethylparaben",
+      "display": "Ethylparaben",
+      "cas": "120-47-8",
+      "function": "Preservative",
+      "names": [
+        "ethylparaben",
+        "ethyl paraben",
+        "ethyl 4-hydroxybenzoate",
+        "sodium ethylparaben"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 12: maximum 0.4% (as acid) for a single ester, 0.8% for mixtures of esters.",
+          "restriction": {
+            "limit": "0.4%"
+          },
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "prohibited_parabens",
+      "display": "Isopropyl-, isobutyl-, phenyl-, benzyl- or pentylparaben",
+      "function": "Preservative",
+      "names": [
+        "isopropylparaben",
+        "isobutylparaben",
+        "phenylparaben",
+        "benzylparaben",
+        "pentylparaben",
+        "isopropyl paraben",
+        "isobutyl paraben"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) by Regulation (EU) 358/2014.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "triclosan",
+      "display": "Triclosan",
+      "cas": "3380-34-5",
+      "function": "Antimicrobial",
+      "names": [
+        "triclosan"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 25: maximum 0.3% only in toothpaste, hand soap, body soap/shower gel, non-spray deodorants, face powders and blemish concealers, and nail products; 0.2% in mouthwash. Not permitted in other product types.",
+          "restriction": {
+            "limit": "0.3%"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "fda_antiseptic_2016",
+          "quote": "US FDA 2016 final rule: triclosan may no longer be marketed in over-the-counter consumer antiseptic wash products (hand and body washes).",
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "triclocarban",
+      "display": "Triclocarban",
+      "cas": "101-20-2",
+      "function": "Antimicrobial",
+      "names": [
+        "triclocarban"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 23: maximum 0.2%, with purity criteria.",
+          "restriction": {
+            "limit": "0.2%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "fda_antiseptic_2016",
+          "quote": "US FDA 2016 final rule: triclocarban may no longer be marketed in over-the-counter consumer antiseptic wash products.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "dehp",
+      "display": "Diethylhexyl phthalate (DEHP)",
+      "cas": "117-81-7",
+      "function": "Plasticiser / fragrance solvent",
+      "names": [
+        "diethylhexyl phthalate",
+        "bis(2-ethylhexyl) phthalate",
+        "dehp",
+        "di(2-ethylhexyl) phthalate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) as a CMR category 1B substance.",
+          "endpoints": [
+            "reproductive",
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "reprotox",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 for cancer (1988) and developmental and male reproductive toxicity (2003).",
+          "endpoints": [
+            "cancer",
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_svhc",
+          "quote": "On the ECHA Candidate List as toxic for reproduction and for endocrine-disrupting properties (human health and environment).",
+          "endpoints": [
+            "endocrine",
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dbp",
+      "display": "Dibutyl phthalate (DBP)",
+      "cas": "84-74-2",
+      "function": "Plasticiser (historically in nail polish)",
+      "names": [
+        "dibutyl phthalate",
+        "dbp",
+        "di-n-butyl phthalate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) as a CMR category 1B substance.",
+          "endpoints": [
+            "reproductive",
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "reprotox",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 for developmental and male and female reproductive toxicity (2005).",
+          "endpoints": [
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_svhc",
+          "quote": "On the ECHA Candidate List as toxic for reproduction and for endocrine-disrupting properties.",
+          "endpoints": [
+            "endocrine",
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bbp",
+      "display": "Benzyl butyl phthalate (BBP)",
+      "cas": "85-68-7",
+      "function": "Plasticiser",
+      "names": [
+        "benzyl butyl phthalate",
+        "butyl benzyl phthalate",
+        "bbp"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) as a CMR category 1B substance.",
+          "endpoints": [
+            "reproductive",
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "reprotox",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 for developmental toxicity (2005).",
+          "endpoints": [
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dep",
+      "display": "Diethyl phthalate (DEP)",
+      "cas": "84-66-2",
+      "function": "Fragrance solvent / denaturant",
+      "names": [
+        "diethyl phthalate",
+        "dep"
+      ],
+      "flags": [
+        {
+          "tier": "C",
+          "category": "advocacy",
+          "source": "tedx",
+          "quote": "Listed on the TEDX List of Potential Endocrine Disruptors (an NGO screening list).",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ],
+      "note": "Not restricted in EU cosmetics. SCCS (2007) concluded DEP was safe at the concentrations then in use. It is rarely declared because it is usually part of 'fragrance'."
+    },
+    {
+      "id": "lilial",
+      "display": "Butylphenyl Methylpropional (Lilial)",
+      "cas": "80-54-6",
+      "function": "Fragrance ingredient",
+      "names": [
+        "butylphenyl methylpropional",
+        "lilial",
+        "2-(4-tert-butylbenzyl)propionaldehyde",
+        "bmhca",
+        "p-bmhca"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) from 1 March 2022 following classification as Repr. 1B (Regulation (EU) 2021/1902).",
+          "endpoints": [
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "reprotox",
+          "source": "echa_clp",
+          "quote": "Harmonised classification Repr. 1B (H360Fd: may damage fertility, suspected of damaging the unborn child) and Skin Sens. 1B.",
+          "endpoints": [
+            "reproductive",
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hicc",
+      "display": "Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde (Lyral / HICC)",
+      "cas": "31906-04-4",
+      "function": "Fragrance ingredient",
+      "names": [
+        "hydroxyisohexyl 3-cyclohexene carboxaldehyde",
+        "lyral",
+        "hicc"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) by Regulation (EU) 2017/1410, fully applicable from 23 August 2021, because of skin sensitisation.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atranol",
+      "display": "Atranol / Chloroatranol (oakmoss and treemoss components)",
+      "function": "Fragrance ingredient",
+      "names": [
+        "atranol",
+        "chloroatranol"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products) by Regulation (EU) 2017/1410 because of skin sensitisation.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musk_xylene",
+      "display": "Musk xylene",
+      "cas": "81-15-2",
+      "function": "Fragrance ingredient (nitro musk)",
+      "names": [
+        "musk xylene",
+        "musk xylol"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products).",
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "environmental",
+          "source": "echa_svhc",
+          "quote": "On the ECHA Candidate List as very persistent and very bioaccumulative (vPvB).",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "musk_ketone",
+      "display": "Musk ketone",
+      "cas": "81-14-1",
+      "function": "Fragrance ingredient (nitro musk)",
+      "names": [
+        "musk ketone"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entry 97: maximum 1.4% in fine fragrance, 0.56% in eau de toilette, 0.042% in other products.",
+          "restriction": {
+            "limit": "0.042% (other products)"
+          },
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "oxybenzone",
+      "display": "Benzophenone-3 (Oxybenzone)",
+      "cas": "131-57-7",
+      "function": "UV filter",
+      "names": [
+        "benzophenone-3",
+        "benzophenone 3",
+        "oxybenzone",
+        "bp-3",
+        "2-hydroxy-4-methoxybenzophenone"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex6",
+          "quote": "Annex VI entry 4 (as amended by Regulation (EU) 2022/1176): maximum 6% in face, hand and lip products (excluding propellant sprays), 2.2% in body products including propellant sprays; label 'contains Benzophenone-3' when used to protect the formulation above 0.5%.",
+          "restriction": {
+            "limit": "2.2% body / 6% face"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "hawaii_sb2571",
+          "quote": "Hawaii Act 104 (2018): sale of sunscreen containing oxybenzone prohibited from 1 January 2021 (environmental grounds).",
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list (under evaluation). SCCS (2021) found it safe up to 6% in face/hand/lip products and 2.2% in body products.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "benzophenone",
+      "display": "Benzophenone",
+      "cas": "119-61-9",
+      "function": "UV absorber / fragrance fixative",
+      "names": [
+        "benzophenone"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "carcinogen",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 as known to the State of California to cause cancer (2012).",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 2B: possibly carcinogenic to humans (Monograph 101).",
+          "endpoints": [
+            "cancer"
+          ]
+        }
+      ],
+      "note": "Different substance from Benzophenone-3 (oxybenzone)."
+    },
+    {
+      "id": "octinoxate",
+      "display": "Ethylhexyl Methoxycinnamate (Octinoxate)",
+      "cas": "5466-77-3",
+      "function": "UV filter",
+      "names": [
+        "ethylhexyl methoxycinnamate",
+        "octinoxate",
+        "octyl methoxycinnamate",
+        "omc",
+        "2-ethylhexyl 4-methoxycinnamate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex6",
+          "quote": "Annex VI entry 12: permitted UV filter, maximum 10%.",
+          "restriction": {
+            "limit": "10%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "hawaii_sb2571",
+          "quote": "Hawaii Act 104 (2018): sale of sunscreen containing octinoxate prohibited from 1 January 2021 (environmental grounds).",
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list (under evaluation).",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "homosalate",
+      "display": "Homosalate",
+      "cas": "118-56-9",
+      "function": "UV filter",
+      "names": [
+        "homosalate",
+        "homomenthyl salicylate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex6",
+          "quote": "Annex VI entry 3 as amended by Regulation (EU) 2022/1176: maximum 7.34% in face products excluding propellant sprays; no longer permitted in other product types for new products from 2025.",
+          "restriction": {
+            "limit": "7.34% face only"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "sccs",
+          "quote": "SCCS opinion SCCS/1622/20 (2021): not safe at the then-permitted 10% because of potential endocrine effects; safe up to 0.5% in the final product, later revised to 7.34% in face products.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "octocrylene",
+      "display": "Octocrylene",
+      "cas": "6197-30-4",
+      "function": "UV filter",
+      "names": [
+        "octocrylene"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex6",
+          "quote": "Annex VI entry 10 as amended by Regulation (EU) 2022/1176: maximum 10% (9% in propellant sprays).",
+          "restriction": {
+            "limit": "10%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list (under evaluation). SCCS (2021) found it safe up to 10%.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4_mbc",
+      "display": "4-Methylbenzylidene Camphor (Enzacamene)",
+      "cas": "36861-47-9",
+      "function": "UV filter",
+      "names": [
+        "4-methylbenzylidene camphor",
+        "enzacamene",
+        "4-mbc"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Removed from Annex VI and added to Annex II (prohibited) by Regulation (EU) 2025/877 following an SCCS opinion identifying endocrine-disrupting properties.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "titanium_dioxide",
+      "display": "Titanium Dioxide",
+      "cas": "13463-67-7",
+      "function": "Pigment / UV filter",
+      "names": [
+        "titanium dioxide",
+        "ci 77891",
+        "tio2"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 2B: possibly carcinogenic to humans, based on inhalation studies in animals (Monograph 93). Relevant to inhalable powders and sprays, not to creams.",
+          "endpoints": [
+            "cancer"
+          ],
+          "routes": [
+            "inhalation"
+          ]
+        }
+      ],
+      "note": "Permitted in EU cosmetics as a colorant (Annex IV) and UV filter (Annex VI), with conditions for powders and sprays that could be inhaled."
+    },
+    {
+      "id": "talc",
+      "display": "Talc",
+      "cas": "14807-96-6",
+      "function": "Absorbent / bulking agent",
+      "names": [
+        "talc",
+        "talcum",
+        "magnesium silicate hydrate"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 2A: probably carcinogenic to humans (Monograph 136, July 2024), based on evidence for perineal use of talc-based body powder and for inhalation in occupational settings. Relevant to loose powders, not to creams or wash-off products.",
+          "endpoints": [
+            "cancer"
+          ],
+          "routes": [
+            "inhalation"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entry 59: powdery products intended for children under three must carry 'keep powder away from children's nose and mouth'.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "hydroquinone",
+      "display": "Hydroquinone",
+      "cas": "123-31-9",
+      "function": "Skin lightening agent",
+      "names": [
+        "hydroquinone",
+        "1,4-benzenediol"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Listed in Annex II (prohibited in cosmetic products), except for professional artificial nail systems (Annex III, 0.02% after mixing).",
+          "endpoints": []
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "fda_hydroquinone",
+          "quote": "US FDA: following the CARES Act (2020) hydroquinone is not permitted in over-the-counter skin lightening products; available only by prescription.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "lead_acetate",
+      "display": "Lead acetate",
+      "cas": "301-04-2",
+      "function": "Progressive hair dye",
+      "names": [
+        "lead acetate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Lead and its compounds are listed in Annex II (prohibited in cosmetic products).",
+          "endpoints": [
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "fda_lead_acetate",
+          "quote": "US FDA repealed the colour additive listing for lead acetate in hair dyes (2018).",
+          "endpoints": []
+        },
+        {
+          "tier": "A",
+          "category": "reprotox",
+          "source": "prop65",
+          "quote": "Lead and lead compounds are listed under Proposition 65 for cancer and developmental and reproductive toxicity.",
+          "endpoints": [
+            "cancer",
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toluene",
+      "display": "Toluene",
+      "cas": "108-88-3",
+      "function": "Solvent (nail products)",
+      "names": [
+        "toluene",
+        "methylbenzene"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entry 185: nail products only, maximum 25%; label 'keep out of reach of children' and 'for use by adults only'.",
+          "restriction": {
+            "limit": "25% nail products"
+          },
+          "endpoints": [
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "reprotox",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 for developmental toxicity (1991) and female reproductive toxicity (2019).",
+          "endpoints": [
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cocamide_dea",
+      "display": "Cocamide DEA",
+      "cas": "68603-42-9",
+      "function": "Foam booster / viscosity agent",
+      "names": [
+        "cocamide dea",
+        "cocamide diethanolamine",
+        "coconut oil diethanolamine condensate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "carcinogen",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 as known to the State of California to cause cancer (2012), as 'coconut oil diethanolamine condensate'.",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 2B: possibly carcinogenic to humans (Monograph 101).",
+          "endpoints": [
+            "cancer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bha",
+      "display": "BHA (Butylated Hydroxyanisole)",
+      "cas": "25013-16-5",
+      "function": "Antioxidant",
+      "names": [
+        "bha",
+        "butylated hydroxyanisole",
+        "tert-butylhydroxyanisole"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "carcinogen",
+          "source": "prop65",
+          "quote": "Listed under Proposition 65 as known to the State of California to cause cancer (1990).",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 2B: possibly carcinogenic to humans.",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bht",
+      "display": "BHT (Butylated Hydroxytoluene)",
+      "cas": "128-37-0",
+      "function": "Antioxidant",
+      "names": [
+        "bht",
+        "butylated hydroxytoluene"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list (under evaluation). SCCS opinion SCCS/1636/21 (2021) considered BHT safe at 0.001% in mouthwash, 0.1% in toothpaste and 0.8% in other products.",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resorcinol",
+      "display": "Resorcinol",
+      "cas": "108-46-3",
+      "function": "Hair dye component",
+      "names": [
+        "resorcinol",
+        "1,3-benzenediol"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entry 22: oxidative hair dye products, maximum 1.25% after mixing; hair lotions and shampoos 0.5%; with mandatory warnings.",
+          "restriction": {
+            "limit": "1.25% hair dye"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "endocrine",
+          "source": "echa_ed",
+          "quote": "On the ECHA endocrine disruptor assessment list; proposed for identification as a substance of very high concern for endocrine-disrupting properties (human health).",
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boric_acid",
+      "display": "Boric acid / Borates",
+      "cas": "10043-35-3",
+      "function": "pH regulator / antimicrobial",
+      "names": [
+        "boric acid",
+        "sodium borate",
+        "borax",
+        "sodium tetraborate",
+        "disodium tetraborate",
+        "sodium perborate"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "reprotox",
+          "source": "echa_clp",
+          "quote": "Harmonised classification Repr. 1B (H360FD: may damage fertility, may damage the unborn child).",
+          "endpoints": [
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entries 1a and 1b: restricted concentrations by product type; not to be used in products for children under three (except where specified).",
+          "endpoints": [
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "display": "Cyclotetrasiloxane (D4)",
+      "cas": "556-67-2",
+      "function": "Silicone carrier / emollient",
+      "names": [
+        "cyclotetrasiloxane",
+        "octamethylcyclotetrasiloxane",
+        "d4"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "reach_xvii",
+          "quote": "REACH Annex XVII entry 70: not to be placed on the market in wash-off cosmetic products at 0.1% or more (from 31 January 2020); Regulation (EU) 2024/1328 extends the restriction to leave-on cosmetics from 6 June 2027.",
+          "restriction": {
+            "limit": "0.1% wash-off"
+          },
+          "endpoints": [
+            "reproductive"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "reprotox",
+          "source": "echa_clp",
+          "quote": "Harmonised classification Repr. 2 (H361f: suspected of damaging fertility). On the Candidate List as PBT/vPvB and endocrine disrupting (environment).",
+          "endpoints": [
+            "reproductive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "display": "Cyclopentasiloxane (D5)",
+      "cas": "541-02-6",
+      "function": "Silicone carrier / emollient",
+      "names": [
+        "cyclopentasiloxane",
+        "decamethylcyclopentasiloxane",
+        "d5"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "reach_xvii",
+          "quote": "REACH Annex XVII entry 70: not to be placed on the market in wash-off cosmetic products at 0.1% or more (from 31 January 2020); Regulation (EU) 2024/1328 extends the restriction to leave-on cosmetics from 6 June 2027.",
+          "restriction": {
+            "limit": "0.1% wash-off"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "environmental",
+          "source": "echa_svhc",
+          "quote": "On the ECHA Candidate List as very persistent and very bioaccumulative (vPvB).",
+          "endpoints": []
+        }
+      ],
+      "note": "The restriction is for environmental persistence. SCCS (2015) considered D5 safe for consumers at the levels used."
+    },
+    {
+      "id": "d6",
+      "display": "Cyclohexasiloxane (D6)",
+      "cas": "540-97-6",
+      "function": "Silicone carrier / emollient",
+      "names": [
+        "cyclohexasiloxane",
+        "dodecamethylcyclohexasiloxane",
+        "d6"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "reach_xvii",
+          "quote": "Regulation (EU) 2024/1328 (REACH Annex XVII entry 70): restricted to below 0.1% in wash-off cosmetics from 6 June 2026 and leave-on cosmetics from 6 June 2027.",
+          "restriction": {
+            "limit": "0.1%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "environmental",
+          "source": "echa_svhc",
+          "quote": "On the ECHA Candidate List as very persistent and very bioaccumulative (vPvB).",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "pfas",
+      "display": "PFAS (per- and polyfluoroalkyl substances)",
+      "function": "Water/oil repellent, smoothing agent",
+      "names": [
+        "ptfe",
+        "polytetrafluoroethylene",
+        "perfluorodecalin",
+        "perfluorohexane",
+        "perfluorononyl dimethicone",
+        "perfluorooctyl triethoxysilane",
+        "c9-15 fluoroalcohol phosphate",
+        "polyperfluoromethylisopropyl ether",
+        "methyl perfluorobutyl ether",
+        "methyl perfluoroisobutyl ether",
+        "perfluoroperhydrophenanthrene"
+      ],
+      "patterns": [
+        "perfluoro",
+        "polyfluoro",
+        "fluorotelomer",
+        "\\bptfe\\b"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "pfas",
+          "source": "ca_ab2771",
+          "quote": "California AB 2771: from 1 January 2025 no cosmetic product containing intentionally added PFAS may be manufactured, sold or distributed in California. Similar laws in Colorado, Maine, Minnesota, Oregon and Washington.",
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "pfas",
+          "source": "echa_svhc",
+          "quote": "Several PFAS (including PFOA, PFHxS and their salts) are on the ECHA Candidate List; a universal PFAS restriction proposal is under evaluation at ECHA.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "sls",
+      "display": "Sodium Lauryl Sulfate (SLS)",
+      "cas": "151-21-3",
+      "function": "Surfactant",
+      "names": [
+        "sodium lauryl sulfate",
+        "sodium lauryl sulphate",
+        "sodium dodecyl sulfate",
+        "sls",
+        "sds"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification of the pure substance: Skin Irrit. 2, Eye Dam. 1, Acute Tox. 4. Not restricted in cosmetics; irritation depends on concentration and contact time.",
+          "endpoints": []
+        }
+      ],
+      "note": "No regulatory restriction in cosmetics. Irritation potential is why it is used in rinse-off products."
+    },
+    {
+      "id": "sles",
+      "display": "Sodium Laureth Sulfate (SLES)",
+      "cas": "9004-82-4",
+      "function": "Surfactant",
+      "names": [
+        "sodium laureth sulfate",
+        "sodium laureth sulphate",
+        "sodium lauryl ether sulfate",
+        "sles",
+        "sodium laureth-2 sulfate",
+        "sodium laureth-3 sulfate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "contaminant_limit",
+          "source": "ny_dioxane",
+          "quote": "Ethoxylated ingredients such as SLES can carry trace 1,4-dioxane from manufacturing. New York limits 1,4-dioxane to 1 ppm in household cleansing and personal care products (from 31 December 2023) and 10 ppm in cosmetics. 1,4-dioxane is listed under Proposition 65 for cancer.",
+          "endpoints": []
+        }
+      ],
+      "note": "The label does not show 1,4-dioxane because it is a contaminant, not an ingredient. Brands can disclose test results through the claim portal."
+    },
+    {
+      "id": "peg",
+      "display": "PEG / polyethylene glycol compounds",
+      "function": "Emulsifier / humectant / surfactant",
+      "names": [],
+      "patterns": [
+        "^peg-\\d+",
+        "^polyethylene glycol",
+        "^ppg-\\d+",
+        "laureth-\\d+",
+        "ceteareth-\\d+",
+        "steareth-\\d+",
+        "oleth-\\d+",
+        "polysorbate"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "contaminant_limit",
+          "source": "ny_dioxane",
+          "quote": "Ethoxylated ingredients can carry trace 1,4-dioxane from manufacturing. New York limits 1,4-dioxane in household cleansing and personal care products (1 ppm) and cosmetics (10 ppm).",
+          "endpoints": []
+        }
+      ],
+      "note": "Not restricted as ingredients in EU or US cosmetics."
+    },
+    {
+      "id": "phenoxyethanol",
+      "display": "Phenoxyethanol",
+      "cas": "122-99-6",
+      "function": "Preservative",
+      "names": [
+        "phenoxyethanol",
+        "2-phenoxyethanol"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 29: permitted preservative, maximum 1%.",
+          "restriction": {
+            "limit": "1%"
+          },
+          "endpoints": []
+        }
+      ],
+      "note": "SCCS opinion SCCS/1575/16 (2016) considered it safe at 1% for all age groups."
+    },
+    {
+      "id": "benzalkonium_chloride",
+      "display": "Benzalkonium Chloride",
+      "cas": "63449-41-2",
+      "function": "Preservative / disinfectant (quaternary ammonium)",
+      "names": [
+        "benzalkonium chloride",
+        "alkyl dimethyl benzyl ammonium chloride",
+        "n-alkyl dimethyl benzyl ammonium chloride",
+        "quaternary ammonium compounds, benzyl-c12-16-alkyldimethyl, chlorides",
+        "adbac"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex5",
+          "quote": "Annex V entry 54: permitted preservative, maximum 0.1% (as benzalkonium chloride); avoid contact with eyes.",
+          "restriction": {
+            "limit": "0.1%"
+          },
+          "endpoints": []
+        },
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification of the concentrated substance: Skin Corr. 1B, Eye Dam. 1, Acute Tox. 4, Aquatic Acute 1.",
+          "endpoints": []
+        }
+      ],
+      "note": "Common active in disinfectant sprays and wipes. The classification applies to the concentrate; consumer products are diluted."
+    },
+    {
+      "id": "didecyldimonium_chloride",
+      "display": "Didecyldimonium Chloride (DDAC)",
+      "cas": "7173-51-5",
+      "function": "Disinfectant (quaternary ammonium)",
+      "names": [
+        "didecyldimonium chloride",
+        "didecyldimethylammonium chloride",
+        "ddac"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification of the concentrated substance: Skin Corr. 1B, Eye Dam. 1, Acute Tox. 4, Aquatic Acute 1.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "sodium_hypochlorite",
+      "display": "Sodium Hypochlorite (bleach)",
+      "cas": "7681-52-9",
+      "function": "Disinfectant / bleaching agent",
+      "names": [
+        "sodium hypochlorite",
+        "hypochlorite",
+        "bleach",
+        "chlorine bleach"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification of the concentrated substance: Skin Corr. 1B, Eye Dam. 1, Aquatic Acute 1; EUH031 'contact with acids liberates toxic gas'.",
+          "endpoints": []
+        }
+      ],
+      "note": "Do not mix with acids or ammonia-based cleaners."
+    },
+    {
+      "id": "ammonia",
+      "display": "Ammonium Hydroxide (ammonia)",
+      "cas": "1336-21-6",
+      "function": "Alkaline cleaner / pH adjuster",
+      "names": [
+        "ammonium hydroxide",
+        "ammonia",
+        "ammonia solution",
+        "aqueous ammonia"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification of the concentrated substance: Skin Corr. 1B, STOT SE 3 (respiratory irritation), Aquatic Acute 1.",
+          "endpoints": []
+        }
+      ],
+      "note": "Do not mix with chlorine bleach."
+    },
+    {
+      "id": "butoxyethanol",
+      "display": "2-Butoxyethanol",
+      "cas": "111-76-2",
+      "function": "Solvent (glass and surface cleaners)",
+      "names": [
+        "2-butoxyethanol",
+        "butoxyethanol",
+        "butyl glycol",
+        "ethylene glycol monobutyl ether",
+        "butyl cellosolve",
+        "butoxyethanol (2-)"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification: Acute Tox. 4 (oral, dermal, inhalation), Skin Irrit. 2, Eye Irrit. 2.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "ethanolamine",
+      "display": "Ethanolamine (MEA)",
+      "cas": "141-43-5",
+      "function": "pH adjuster / degreaser",
+      "names": [
+        "ethanolamine",
+        "monoethanolamine",
+        "mea",
+        "2-aminoethanol"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "irritant",
+          "source": "echa_clp",
+          "quote": "Harmonised classification: Skin Corr. 1B, Acute Tox. 4, STOT SE 3 (respiratory irritation).",
+          "endpoints": []
+        },
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entry 61: not to be used with nitrosating systems; maximum secondary amine content and purity requirements, to limit nitrosamine formation.",
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "limonene_oxidised",
+      "display": "d-Limonene (as cleaner solvent)",
+      "cas": "5989-27-5",
+      "function": "Solvent / fragrance",
+      "names": [
+        "d-limonene",
+        "(r)-p-mentha-1,8-diene",
+        "orange terpenes"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "sensitiser",
+          "source": "echa_clp",
+          "quote": "Harmonised classification: Skin Sens. 1 (H317), Skin Irrit. 2, Flam. Liq. 3, Aquatic Acute 1 and Chronic 1. Sensitisation is mainly caused by oxidation products formed on exposure to air.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cocamidopropyl_betaine",
+      "display": "Cocamidopropyl Betaine",
+      "cas": "61789-40-0",
+      "function": "Surfactant",
+      "names": [
+        "cocamidopropyl betaine",
+        "capb"
+      ],
+      "flags": [
+        {
+          "tier": "B",
+          "category": "sensitiser",
+          "source": "sccs",
+          "quote": "Not restricted. Contact allergy is attributed mainly to manufacturing impurities (amidoamine and dimethylaminopropylamine); named Allergen of the Year 2004 by the American Contact Dermatitis Society.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mineral_oil",
+      "display": "Mineral oil / Paraffinum Liquidum / Petrolatum",
+      "function": "Emollient / occlusive",
+      "names": [
+        "mineral oil",
+        "paraffinum liquidum",
+        "petrolatum",
+        "paraffin",
+        "white petrolatum",
+        "liquid paraffin",
+        "petroleum jelly"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex2",
+          "quote": "Annex II lists petroleum-derived oils and waxes except where the full refining history is known and the starting material is not carcinogenic. Cosmetic-grade mineral oil and petrolatum meet this condition.",
+          "endpoints": []
+        }
+      ],
+      "note": "Permitted in the EU and US when pharmaceutical or cosmetic grade. Shown for information."
+    },
+    {
+      "id": "retinol",
+      "display": "Retinol / Retinyl esters (Vitamin A)",
+      "cas": "68-26-8",
+      "function": "Skin conditioning",
+      "names": [
+        "retinol",
+        "retinyl acetate",
+        "retinyl palmitate",
+        "retinyl propionate",
+        "vitamin a"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entries 376 and 377 (Regulation (EU) 2024/996): maximum 0.05% retinol equivalent in body lotion and 0.3% in other leave-on and rinse-off products, with a warning for consumers with high vitamin A intake. Applies to new products from 1 November 2025.",
+          "restriction": {
+            "limit": "0.3% (0.05% body lotion)"
+          },
+          "endpoints": [
+            "reproductive"
+          ]
+        }
+      ],
+      "note": "The restriction reflects total vitamin A intake, which is relevant in pregnancy."
+    },
+    {
+      "id": "kojic_acid",
+      "display": "Kojic Acid",
+      "cas": "501-30-4",
+      "function": "Skin lightening agent",
+      "names": [
+        "kojic acid"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III (Regulation (EU) 2024/996): maximum 1% in face and hand products, applicable to new products from 1 February 2025.",
+          "restriction": {
+            "limit": "1%"
+          },
+          "endpoints": [
+            "endocrine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alpha_arbutin",
+      "display": "Alpha-Arbutin / Arbutin",
+      "cas": "84380-01-8",
+      "function": "Skin lightening agent",
+      "names": [
+        "alpha-arbutin",
+        "arbutin",
+        "beta-arbutin"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "restricted",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III (Regulation (EU) 2024/996): alpha-arbutin maximum 2% in face cream and 0.5% in body lotion; arbutin maximum 7% in face cream; applicable to new products from 1 February 2025.",
+          "restriction": {
+            "limit": "2% face / 0.5% body"
+          },
+          "endpoints": []
+        }
+      ]
+    },
+    {
+      "id": "coal_tar",
+      "display": "Coal tar",
+      "cas": "8007-45-2",
+      "function": "Anti-dandruff / anti-psoriasis active",
+      "names": [
+        "coal tar",
+        "coal tar solution",
+        "pix carbonis",
+        "crude coal tar"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "prohibited",
+          "source": "eu_cpr_annex2",
+          "quote": "Coal tar (crude and refined) is listed in Annex II (prohibited in cosmetic products).",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "A",
+          "category": "carcinogen",
+          "source": "prop65",
+          "quote": "Coal tars are listed under Proposition 65 as known to cause cancer.",
+          "endpoints": [
+            "cancer"
+          ]
+        },
+        {
+          "tier": "B",
+          "category": "carcinogen",
+          "source": "iarc",
+          "quote": "IARC Group 1: carcinogenic to humans (coal-tar pitch; Monograph 100F).",
+          "endpoints": [
+            "cancer"
+          ]
+        }
+      ],
+      "note": "In the US, coal tar is permitted as an OTC drug active in dandruff and psoriasis shampoos (21 CFR 358.710)."
+    },
+    {
+      "id": "styrene_acrylates",
+      "display": "Acrylates / Styrene copolymer (film-formers, microplastic polymers)",
+      "function": "Film former / opacifier",
+      "names": [
+        "acrylates copolymer",
+        "styrene/acrylates copolymer",
+        "acrylates/c10-30 alkyl acrylate crosspolymer",
+        "polyethylene",
+        "polypropylene",
+        "nylon-12",
+        "polymethyl methacrylate",
+        "pmma"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "microplastic",
+          "source": "reach_xvii",
+          "quote": "Regulation (EU) 2023/2055 (REACH Annex XVII entry 78) restricts intentionally added synthetic polymer microparticles. Rinse-off exfoliating microbeads prohibited from 17 October 2023; other rinse-off cosmetics from 2027, leave-on from 2029, with exemptions for polymers that are not solid particles (for example dissolved film formers).",
+          "endpoints": []
+        }
+      ],
+      "note": "Whether a polymer counts as a microplastic depends on its physical form in the product, which the label does not show."
+    },
+    {
+      "id": "lyral_like_allergen_group",
+      "display": "Oakmoss / Treemoss extract",
+      "function": "Fragrance ingredient",
+      "names": [
+        "evernia prunastri extract",
+        "evernia furfuracea extract",
+        "oakmoss",
+        "treemoss",
+        "evernia prunastri",
+        "evernia furfuracea"
+      ],
+      "flags": [
+        {
+          "tier": "A",
+          "category": "allergen",
+          "source": "eu_cpr_annex3",
+          "quote": "Annex III entries 91 and 92: must be named on the label when above 0.001% in leave-on or 0.01% in rinse-off products; atranol and chloroatranol content limited to 100 ppm.",
+          "endpoints": [
+            "sensitisation"
+          ]
+        }
+      ]
+    }
+  ]
+}

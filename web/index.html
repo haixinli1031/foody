@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1f6f5f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Label Check" />
+  <meta name="description" content="Scan a household or personal-care product and see which listed substances it contains, who lists them, and whether it matches the preferences you chose." />
+  <title>Foody Label Check</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn hidden" id="back-btn" aria-label="Back">&#8249;</button>
+    <h1 id="title">Label Check</h1>
+    <span class="draft-pill" title="Reference data has not yet been reviewed by a toxicologist">draft data</span>
+  </header>
+
+  <main id="main">
+
+    <!-- HOME -->
+    <section id="view-home" class="view">
+      <div class="card hero">
+        <p class="lede">Scan a product. See which listed substances it contains, who lists them and why, and whether it matches the preferences you chose.</p>
+        <div class="actions">
+          <button class="btn primary" id="scan-btn">Scan barcode</button>
+          <label class="btn" for="photo-input">Photograph ingredients</label>
+          <input type="file" id="photo-input" accept="image/*" capture="environment" hidden />
+          <button class="btn" id="paste-btn">Type or paste ingredients</button>
+        </div>
+        <form id="code-form" class="inline-form">
+          <input id="code-input" inputmode="numeric" pattern="[0-9]*" placeholder="or enter barcode digits" aria-label="Barcode" />
+          <button class="btn small" type="submit">Look up</button>
+        </form>
+      </div>
+
+      <div id="scanner-wrap" class="card hidden">
+        <div id="reader"></div>
+        <p class="muted small" id="scanner-hint">Point the camera at the barcode. Hold steady, 10 to 20 cm away.</p>
+        <button class="btn" id="scan-stop">Stop camera</button>
+      </div>
+
+      <div id="paste-wrap" class="card hidden">
+        <h2>Ingredient list</h2>
+        <p class="muted small">Copy the list exactly as printed, separated by commas.</p>
+        <textarea id="paste-text" rows="6" placeholder="Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Parfum, Limonene, Benzisothiazolinone"></textarea>
+        <label class="field">Product name (optional) <input id="paste-name" placeholder="e.g. Lavender laundry liquid" /></label>
+        <button class="btn primary" id="paste-analyze">Analyze</button>
+      </div>
+
+      <div id="ocr-wrap" class="card hidden">
+        <h2>Check the text we read</h2>
+        <p class="muted small">Text recognition is imperfect. Correct anything wrong before continuing. Nothing is flagged until you confirm.</p>
+        <div id="ocr-progress" class="progress"><div></div></div>
+        <textarea id="ocr-text" rows="8"></textarea>
+        <label class="field">Product name (optional) <input id="ocr-name" /></label>
+        <button class="btn primary" id="ocr-analyze">Confirm and analyze</button>
+      </div>
+
+      <div class="card" id="history-card">
+        <h2>Recent</h2>
+        <ul id="history" class="list"></ul>
+        <p class="muted small" id="history-empty">Nothing scanned yet.</p>
+      </div>
+
+      <p class="disclaimer">This app reports published regulatory and scientific information about ingredients. It is not medical advice and does not say whether a product is safe or unsafe. Consult a doctor for health decisions.</p>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="view-profile" class="view hidden">
+      <div class="card">
+        <h2>What do you want to avoid?</h2>
+        <p class="muted small">Your answers decide the “Your match” result. They stay on this device.</p>
+
+        <fieldset>
+          <legend>Life stage</legend>
+          <label class="radio"><input type="radio" name="life" value="none" /> None of these</label>
+          <label class="radio"><input type="radio" name="life" value="pregnant" /> Pregnant or trying to conceive</label>
+          <label class="radio"><input type="radio" name="life" value="infant" /> Infant in the home</label>
+          <label class="radio"><input type="radio" name="life" value="child" /> Child under 12</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Flag substances that are</legend>
+          <label class="check"><input type="checkbox" data-pref="regulatory" /> Prohibited in cosmetics (EU Annex II, US FDA, CA law)</label>
+          <label class="check"><input type="checkbox" data-pref="carcinogen" /> Listed for cancer or reproductive toxicity (IARC 1, 2A, 2B; Prop 65; CLP)</label>
+          <label class="check"><input type="checkbox" data-pref="endocrine" /> On the EU or ECHA endocrine-disruptor lists</label>
+          <label class="check"><input type="checkbox" data-pref="undisclosed" /> Undisclosed “fragrance / parfum” or generic class names</label>
+          <label class="check"><input type="checkbox" data-pref="formaldehyde" /> Formaldehyde-releasing preservatives</label>
+          <label class="check"><input type="checkbox" data-pref="pfas" /> PFAS</label>
+          <label class="check"><input type="checkbox" data-pref="microplastic" /> Polymers covered by the EU microplastics restriction</label>
+          <label class="check"><input type="checkbox" data-pref="allergens_all" /> Any declared EU fragrance allergen (very strict)</label>
+          <label class="check"><input type="checkbox" data-pref="advocacy" /> Substances on NGO screening lists (SIN, TEDX). Shown as “advocacy list”</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>My allergies or sensitivities</legend>
+          <p class="muted small">Type an ingredient name and press add. Matched case-insensitively against the label.</p>
+          <div class="inline-form">
+            <input id="allergen-input" placeholder="e.g. limonene" aria-label="Allergen" />
+            <button class="btn small" id="allergen-add" type="button">Add</button>
+          </div>
+          <div id="allergen-chips" class="chips"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Strictness</legend>
+          <label class="radio"><input type="radio" name="strict" value="regulatory" /> Regulatory only: flag what is prohibited or used outside its permitted product type</label>
+          <label class="radio"><input type="radio" name="strict" value="balanced" /> Balanced: add authoritative scientific classifications</label>
+          <label class="radio"><input type="radio" name="strict" value="precautionary" /> Precautionary: also count every restricted substance and advocacy-list entry</label>
+        </fieldset>
+
+        <button class="btn primary" id="profile-save">Save</button>
+        <p class="muted small" id="profile-saved"></p>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="view-result" class="view hidden">
+      <div id="result"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="view-about" class="view hidden">
+      <div class="card">
+        <h2>How this works</h2>
+        <p>We read the ingredient list from the label (via the Open Beauty Facts, Open Products Facts and Open Food Facts databases, or from a photo you confirm), match each name against a reference list of substances, and show you what named authorities say about each one.</p>
+        <h3>Evidence tiers</h3>
+        <ul class="tiers">
+          <li><span class="tier tier-A">A</span> Regulatory list in force: EU Cosmetics Regulation annexes, REACH restrictions, US FDA rules, California Proposition 65 and state laws.</li>
+          <li><span class="tier tier-B">B</span> Authoritative scientific body: IARC monographs, ECHA harmonised classification, SCCS opinions, ECHA endocrine-disruptor assessment list.</li>
+          <li><span class="tier tier-C">C</span> Advocacy or screening list published by an NGO. Hidden unless you turn it on. Always labelled.</li>
+          <li><span class="tier tier-D">D</span> A fact about the label itself, such as an undisclosed fragrance mixture or a declared allergen.</li>
+        </ul>
+        <h3>What we do not do</h3>
+        <p>We do not give products a safety score. We do not know the concentration of any ingredient, so we cannot calculate risk. We never say a product is safe, unsafe, toxic or clean. The only verdict is whether a product matches the preferences you set.</p>
+        <h3>Exposure matters</h3>
+        <p>A restriction that applies to leave-on products may not apply to a rinse-off product. Choose the product type on the result screen and the notes adjust.</p>
+        <h3>Data status</h3>
+        <p id="data-version"></p>
+        <p>Every entry cites its source. Reference data has <strong>not yet been reviewed by a board-certified toxicologist</strong>. Treat it as a draft and check the source before acting on it.</p>
+        <h3>Brands and corrections</h3>
+        <p>If you make a product we list and the information is out of date or wrong, <a id="claim-link" href="#" target="_blank" rel="noopener">open a correction request</a>. We mark the listing under review within one day and resolve it within five business days.</p>
+        <h3>Sources and licences</h3>
+        <ul id="sources-list" class="list small"></ul>
+        <p class="small">Product data from <a href="https://world.openbeautyfacts.org" target="_blank" rel="noopener">Open Beauty Facts</a>, <a href="https://world.openproductsfacts.org" target="_blank" rel="noopener">Open Products Facts</a> and <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a>, available under the Open Database License (ODbL).</p>
+        <p class="disclaimer">Not medical advice. This app reports published information; it does not diagnose allergies or health conditions. We sell no products and accept no payment from brands.</p>
+      </div>
+    </section>
+
+    <!-- INGREDIENT DETAIL (sheet) -->
+    <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true">
+      <div class="sheet-inner">
+        <button class="icon-btn close" id="sheet-close" aria-label="Close">&times;</button>
+        <div id="sheet-body"></div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="tabbar">
+    <button data-view="home" class="active">Scan</button>
+    <button data-view="profile">Preferences</button>
+    <button data-view="about">About</button>
+  </nav>
+
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

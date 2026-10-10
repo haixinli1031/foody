@@ -1,0 +1,15 @@
+{
+  "name": "Foody Label Check",
+  "short_name": "Label Check",
+  "description": "Scan a household or personal-care product and see which listed substances it contains, who lists them, and whether it matches the preferences you chose.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f5",
+  "theme_color": "#1f6f5f",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

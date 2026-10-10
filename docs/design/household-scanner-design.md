@@ -1,6 +1,6 @@
 # Household and personal-care scanner: rough product design and low-legal-risk information model
 
-Status: draft v0.1, 2026-10-06. Companion to
+Status: draft v0.2, 2026-10-10 (v0.1 2026-10-06; BIT example corrected). Companion to
 `docs/research/toxic-product-scanner-analysis.md`.
 
 ## 0. One-paragraph summary
@@ -130,9 +130,10 @@ This is the screen that carries all the legal weight. Design rules:
 │ LISTED SUBSTANCES  (3)                  │
 │                                         │
 │ ● Benzisothiazolinone                   │
-│   Restricted · EU Annex V, max 0.05%    │
-│   in rinse-off ─ "may cause allergic    │
-│   skin reaction" (ECHA CLP)             │
+│   Classified · ECHA CLP Skin Sens. 1    │
+│   "may cause an allergic skin reaction" │
+│   Not on EU Annex V (permitted cosmetic │
+│   preservatives)                        │
 │   Exposure: rinse-off, residue on       │
 │   fabric                                │
 │                                         │
@@ -180,22 +181,23 @@ petition, campaign or call to action against the brand.
 ├────────────────────────────────────────┤
 │ Who lists it, and what they say         │
 │                                         │
-│ EU Cosmetics Reg. Annex V, entry 58     │
-│  Permitted in rinse-off up to 0.05%.    │
-│  Not permitted in leave-on.    [source] │
-│                                         │
 │ ECHA harmonised classification (CLP)    │
 │  Skin Sens. 1 ─ "May cause an allergic  │
-│  skin reaction." Eye Dam. 1.    [source]│
+│  skin reaction." Eye Dam. 1,            │
+│  Acute Tox. 4.                  [source]│
+│                                         │
+│ EU Cosmetics Reg. Annex V               │
+│  Not listed: not a permitted            │
+│  preservative in EU cosmetics. Used in  │
+│  detergents under the Biocidal Products │
+│  Regulation.                   [source] │
 │                                         │
 │ IARC: not evaluated                     │
 │ Prop 65: not listed                     │
-│ NMPA 化妆品安全技术规范: 限用, 0.01%     [source]│
 ├────────────────────────────────────────┤
 │ Evidence strength      ■■■□  Regulatory │
 │ Exposure in this product                │
-│  Rinse-off; concentration not declared; │
-│  legal max 0.05% in EU.                 │
+│  Rinse-off; concentration not declared. │
 ├────────────────────────────────────────┤
 │ Plain-language note (reviewed by DABT   │
 │ toxicologist, v3, 2026-09-12)           │
